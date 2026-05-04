@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Cria variáveis*/
+:root {
+  --bg-nav: #212121;   
+  --gold-color: #bb8b06;
+  --font-white: #fff;
+  --section-white: #fff;
+  --section-gray1: #CCCCCC;
+  --section-gray2: #808080;
+  --section-gray3: #333333;
+  --gold-color-btn: #795300;
+  --gold-color-btn-hover: #996e02;
+  --font-logo: "Lobster", sans-serif;
+  --font-p: "Nunito", sans-serif;
+  --font-menu: "Outfit", sans-serif;
+  --font-h1:"PT serif", serif;
+  --font-h2:"Noto Sans", sans-serif
+}
+/* RESET */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Faz a rolagem suave ao clicar nos botões */
+}
+
+header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 10vh;
+}
+
+/* Barra de navegação */
+
+nav {
+    display: flex;
+    width: 100%;
+    background: var(--bg-nav);
+    border-bottom: 1.75px solid var(--gold-color);
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Elementos da barra de navegação */
+
+.logo a{
+    font-family: var(--font-logo);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.9em;
+    font-style: normal;
+    color:var(--font-white);
+    transition: color 0.4s;
+    list-style-type: none;
+}
+
+.logo ul{
+    list-style-type: none;
+}
+
+.logo a:hover{
+    color: var(--gold-color);
+}
+
+.menu-bar li{
+    padding: 10px;
+    margin: 0px 5px 0px 5px;
+    border-radius: 7px 7px 7px 7px;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.menu-bar li:hover {
+    opacity: 0.5;
+
+}
+
+.menu-bar ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    width: 100%;
+}
+
+.menu-bar ul li a{
+    text-decoration: none;
+    color: var(--font-white);
+    font-weight: 500;
+    font-size: 1em;
+    padding: 0 30px 0 30px;
+    font-family: var(--font-menu);
+    
+}
+
+.home {
+    min-height: 50vh;
+    padding: 100px 20px; /* Espaço para o menu fixo não cobrir o título */
+
+}
+
+section {
+    min-height: 100vh; /* Cada seção ocupa a tela toda */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+section p {
+    font-family: var(--font-p);
+    padding: 0 300px 0 300px;
+    
+}
+
+section h1{
+    font-family: var(--font-h1);
+    font-weight: 700;
+    font-size: 1.9em;
+    font-style: normal;
+}
+
+section h2{
+    font-family: var(--font-h2);
+}
+
+section h1,h2,p {
+    padding: 0 0 30px 0 ;
+        
+}
+
+
+section > p > a {
+    text-decoration: none;
+    color: var(--font-white);
+    transition: color 0.4s;
+    text-align: center;
+
+}
+
+section > p > a:hover {
+    color: var(--gold-color);
+   
+}
+
+/* Cores Alternadas para seções */
+#home { background-color: var(--section-gray3); color: var(--font-white); }
+#carousel { background-color: var(--section-white);}
+#portfolio { background-color: var(--section-gray1) ; }
+#services { background-color: var(--section-gray2); }
+#contact { background-color: var(--section-gray3); color: var(--font-white); }
+
+
+/* Estilo do Botão */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--gold-color-btn);
+    color: var(--font-white);
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--gold-color-btn-hover);
+}
