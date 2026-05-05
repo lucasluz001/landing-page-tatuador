@@ -63,15 +63,61 @@
 
         <!-- Contact area -->
         <section id="contact" class="contact">
-            <h2>Contato</h2>
-            <p>Quer transformar sua ideia em tatuagem? Entre em contato e agende sua sessão. Estamos prontos para ouvir
-                você e criar juntos algo inesquecível.</p>
-            <p>Whatsapp: (11) 97654-3210</p>
-            <p>Instagram: <a href="#">@lichttattoo</a></p>
-            <p>Facebook: <a href="#">lichttattoo@outlook.com</a></p>
-            <p>Gmail: <a href="#">lichttattoo@gmail.com</a></p>
-            <p>Outlook: <a href="#">lichttattoo@outlook.com</a></p>
+            <div class="contato">
+                <h2>Contato</h2>
+                <p>Quer transformar sua ideia em tatuagem? Entre em contato e agende sua sessão. Estamos prontos para ouvir
+                    você e criar juntos algo inesquecível.</p>
+                <p>Whatsapp: (11) 97654-3210</p>
+                <p>Instagram: <a href="#">@lichttattoo</a></p>
+                <p>Facebook: <a href="#">lichttattoo@outlook.com</a></p>
+            </div>
+            <div class="contato-form">
+                <form action="/enviar-contato" method="POST">
+                    <!-- Informações Pessoais -->
+                    <div>
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
 
+                    <div>
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" name="telefone" required>
+                    </div>
+
+                    <div>
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <!-- Detalhes do Projeto -->
+                    <div>
+                        <label for="estilo">Estilo de Tatuagem:</label>
+                        <select id="estilo" name="estilo">
+                        <option value="blackwork">Blackwork</option>
+                        <option value="fineline">Fine Line</option>
+                        <option value="old-school">Old School</option>
+                        <option value="realismo">Realismo</option>
+                        <option value="oriental">Oriental</option>
+                        <option value="outro">Outro</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="tipo">Tipo de Trabalho:</label>
+                        <select id="tipo" name="tipo">
+                        <option value="comum">Tatuagem Comum</option>
+                        <option value="fechamento">Fechamento</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="descricao">Descrição da Ideia:</label>
+                        <textarea id="descricao" name="descricao" rows="5"></textarea>
+                    </div>
+
+                    <button type="submit">Enviar Pedido</button>
+                </form>
+            </div>
         </section>
 
     </main>
