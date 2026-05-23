@@ -7,25 +7,30 @@
 /*Cria variáveis*/
 :root {
   --bg-nav: #212121;   
-  --gold-color: #bb8b06;
+  --gold-color: #DAA520;
   --font-white: #fff;
   --section-white: #fff;
   --section-gray1: #CCCCCC;
   --section-gray2: #808080;
   --section-gray3: #333333;
-  --gold-color-btn: #795300;
+  --gold-color-btn: #7f5f0e;
   --gold-color-btn-hover: #996e02;
+  --gold-faixa-contato: #ab8117;
+  --color-div-form: #636363;
   --font-logo: "Lobster", sans-serif;
   --font-p: "Nunito", sans-serif;
   --font-menu: "Outfit", sans-serif;
-  --font-h1:"PT serif", serif;
-  --font-h2:"Noto Sans", sans-serif
+  --font-serif:"PT serif", serif;
+ 
 }
 /* RESET */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    box-shadow: none;
+    outline: none;
+    border: none;
 }
 
 html {
@@ -63,6 +68,7 @@ nav {
     color:var(--font-white);
     transition: color 0.4s;
     list-style-type: none;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.7);
 }
 
 .logo ul{
@@ -79,6 +85,7 @@ nav {
     border-radius: 7px 7px 7px 7px;
     transition: opacity 0.3s ease;
     cursor: pointer;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.7);
 }
 
 .menu-bar li:hover {
@@ -100,20 +107,202 @@ nav {
     text-decoration: none;
     color: var(--font-white);
     font-weight: 500;
-    font-size: 1em;
+    font-size: 1.1em;
     padding: 0 30px 0 30px;
     font-family: var(--font-menu);
     
 }
 
-.home {
-    min-height: 50vh;
-    padding: 100px 20px; /* Espaço para o menu fixo não cobrir o título */
+
+.portfolio{
+    display: flex;
+    justify-content: flex-start;
+    padding: 30px 0 0 0;
+}
+
+.portfolio p{
+    padding: 0 300px 10px 300px;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative; /* Necessário para posicionar os botões */
+    background-color: black;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  
+}
+
+
+.botao-carousel{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
 
 }
 
+.esquerda { left: 10px; }
+.direita { right: 10px; }
+
+.contact p {
+    padding: 0px 300px 50px 300px;
+}
+
+.contato{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 57vh;
+    background-color: var(--bg-nav);
+    box-shadow: 0 4px 10px black;
+}
+
+.contato-left{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 50vw;
+    height: 50vh;
+    font-family: var(--font-p);
+    background-color: var(--bg-nav);
+    padding-left: 200px;
+
+}
+
+.contato-left p{
+    padding: 10px 0 5px 0;
+    font-size: 0.8em;
+    font-weight: 800;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
+    
+}
+
+.contato-left > p > span {
+    padding-right: 7px;
+}
+
+.blur {
+    opacity: 0.7;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+    padding: 0;
+}
+
+.contato-form-grid form{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    grid-auto-rows: auto;
+    align-items: center;
+    grid-template-areas: 
+    "top top top top"
+    "left left right right"
+    "left left right right"
+    "button button button button";
+    background-color: var(--color-div-form);
+    gap: 25px;
+    width: 500px;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 7px black;
+}
+
+.contato-form-grid > form > h2 {
+    padding: 10px 0 5px 0;
+    font-size: 2em;
+    grid-area: top;
+    font-family: var(--font-logo);
+    color: var(--font-white);
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+.contato-form-left, .contato-form-right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: var(--font-white);
+    font-family: var(--font-p);
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+    
+}
+
+.contato-form-left {
+    grid-area: left;
+    padding-bottom: 70px;
+    padding-left: 20px;
+    gap: 10px;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+.contato-form-right {
+    grid-area: right;
+    padding-right: 20px;
+    gap: 14px;
+    
+}
+
+.contato-form-right > input,select,textarea {
+    border-radius: 5px;
+    border: 1px solid grey;
+    width: 100%;
+    text-align: center;
+    opacity: 0.8;  
+    padding-left: 5px;
+    resize: none;
+    
+}
+
+.contato-form-right > input,textarea {
+    text-align: left;
+}
+
+.contato-form-right > form > input,select,textarea {
+    font-family: var(--font-p);
+    font-weight: 600;
+}
+
+.button-form{
+    grid-area: button;
+    
+}
+
+.button-form button{
+    width: 95%;
+    height: 50px;
+    border-radius: 20px;
+    font-family: var(--font-p);
+    font-weight: 600;
+    background-color: white;
+    font-size: 1.5em;
+    opacity: 0.8;
+    cursor: pointer;
+
+    
+}
+
+section > div > div > p > a:hover {
+    color: var(--gold-color);
+   
+}
+
 section {
-    min-height: 100vh; /* Cada seção ocupa a tela toda */
+    height: 100vh; /* Cada seção ocupa a tela toda */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -127,15 +316,20 @@ section p {
     
 }
 
+section > div > p  {
+    font-family: var(--font-p);
+    
+}
+
 section h1{
-    font-family: var(--font-h1);
+    font-family: var(--font-serif);
     font-weight: 700;
     font-size: 1.9em;
     font-style: normal;
 }
 
 section h2{
-    font-family: var(--font-h2);
+    font-family: var(--font-serif);
 }
 
 section h1,h2,p {
@@ -143,18 +337,9 @@ section h1,h2,p {
         
 }
 
-
-section > p > a {
-    text-decoration: none;
-    color: var(--font-white);
-    transition: color 0.4s;
-    text-align: center;
-
-}
-
-section > p > a:hover {
-    color: var(--gold-color);
-   
+footer{
+    background-color: black;
+    height: 70vh;
 }
 
 /* Cores Alternadas para seções */
