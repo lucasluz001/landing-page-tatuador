@@ -119,7 +119,7 @@ nav {
             }
 
 .home {
-    background-image: url('../src/tatuador.png');
+    background-image: url('src/tatuador.png');
     background-position: top center;
     background-attachment: fixed;
     background-size: cover;
