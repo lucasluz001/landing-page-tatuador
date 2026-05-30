@@ -4,19 +4,23 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-/*Cria variáveis*/
+/* Declaração de variáveis*/
 :root {
   --bg-nav: #212121;   
   --gold-color: #DAA520;
   --font-white: #fff;
+
   --section-white: #fff;
   --section-gray1: #CCCCCC;
-  --section-gray2: #808080;
+  --section-gray2: #6B6B6B;
   --section-gray3: #333333;
+
   --gold-color-btn: #7f5f0e;
   --gold-color-btn-hover: #996e02;
   --gold-faixa-contato: #ab8117;
+
   --color-div-form: #636363;
+
   --font-logo: "Lobster", sans-serif;
   --font-p: "Nunito", sans-serif;
   --font-menu: "Outfit", sans-serif;
@@ -55,6 +59,7 @@ nav {
     border-bottom: 1.75px solid var(--gold-color);
     align-items: center;
     justify-content: space-around;
+    
 }
 
 /* Elementos da barra de navegação */
@@ -71,13 +76,13 @@ nav {
     text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.7);
 }
 
-.logo ul{
-    list-style-type: none;
-}
+    .logo ul{
+        list-style-type: none;
+    }
 
-.logo a:hover{
-    color: var(--gold-color);
-}
+        .logo a:hover{
+            color: var(--gold-color);
+        }
 
 .menu-bar li{
     padding: 10px;
@@ -88,41 +93,46 @@ nav {
     text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.7);
 }
 
-.menu-bar li:hover {
-    opacity: 0.5;
+    .menu-bar li:hover {
+        opacity: 0.5;
 
-}
+    }
 
-.menu-bar ul{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
-    list-style-type: none;
-    width: 100%;
-}
+        .menu-bar ul{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: center;
+            list-style-type: none;
+            width: 100%;
+        }
 
-.menu-bar ul li a{
-    text-decoration: none;
-    color: var(--font-white);
-    font-weight: 500;
-    font-size: 1.1em;
-    padding: 0 30px 0 30px;
-    font-family: var(--font-menu);
-    
-}
+            .menu-bar ul li a{
+                text-decoration: none;
+                color: var(--font-white);
+                font-weight: 500;
+                font-size: 1.1em;
+                padding: 0 30px 0 30px;
+                font-family: var(--font-menu);
+                
+            }
 
 
 .portfolio{
     display: flex;
-    justify-content: flex-start;
-    padding: 30px 0 0 0;
+    justify-content: flex-end;
+    padding-bottom: 50px;
+    
 }
 
-.portfolio p{
-    padding: 0 300px 10px 300px;
-}
+    .portfolio h2{
+        color: var(--font-white);
+    }
+
+        .portfolio p{
+            padding: 0 300px 25px 300px;
+        }
 
 .carousel {
     display: flex;
@@ -138,8 +148,17 @@ nav {
 .slides {
     display: flex;
     transition: transform 0.5s ease-in-out;
-  
+    width: 100%;
+
 }
+
+    .slides img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        flex-shrink: 0;
+
+    }
 
 
 .botao-carousel{
@@ -151,13 +170,31 @@ nav {
     border-radius: 50%;
     border: none;
     background: black;
+    opacity: 0.5;
+    transition: all 0.3s ease-in-out;
     color: white;
     cursor: pointer;
 
 }
 
+.botao-carousel:hover{
+    opacity: 0.9;
+    width: 60px;
+    height: 60px;
+}
+
 .esquerda { left: 10px; }
 .direita { right: 10px; }
+
+.services img{
+    width: 100%;
+    height: 100vh;
+    background-position: right center;
+    background-attachment: fixed;
+    background-size: cover;
+    box-shadow: inset 6px 6px 13px 0px #00000065;
+
+}
 
 .contact p {
     padding: 0px 300px 70px 300px;
@@ -186,17 +223,17 @@ nav {
 
 }
 
-.contato-left p{
-    padding: 10px 0 5px 0;
-    font-size: 0.8em;
-    font-weight: 800;
-    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
-    
-}
+    .contato-left p{
+        padding: 10px 0 5px 0;
+        font-size: 0.8em;
+        font-weight: 800;
+        text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
+        
+    }
 
-.contato-left > p > span {
-    padding-right: 7px;
-}
+        .contato-left > p > span {
+            padding-right: 7px;
+        }
 
 .blur {
     opacity: 0.7;
@@ -222,14 +259,22 @@ nav {
     box-shadow: 4px 4px 7px black;
 }
 
-.contato-form-grid > form > h2 {
-    padding: 10px 0 5px 0;
-    font-size: 2em;
-    grid-area: top;
-    font-family: var(--font-logo);
-    color: var(--font-white);
-    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
-}
+    .contato-form-grid > form > h2 {
+        padding: 10px 0 5px 0;
+        font-size: 2em;
+        grid-area: top;
+        font-family: var(--font-logo);
+        color: var(--font-white);
+        text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+    }
+
+        .contato-form-left {
+            grid-area: left;
+            padding-bottom: 70px;
+            padding-left: 20px;
+            gap: 10px;
+            text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+        }
 
 .contato-form-left, .contato-form-right{
     display: flex;
@@ -239,16 +284,10 @@ nav {
     color: var(--font-white);
     font-family: var(--font-p);
     text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
-    
+        
 }
 
-.contato-form-left {
-    grid-area: left;
-    padding-bottom: 70px;
-    padding-left: 20px;
-    gap: 10px;
-    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
-}
+    
 
 .contato-form-right {
     grid-area: right;
@@ -257,85 +296,84 @@ nav {
     
 }
 
-.contato-form-right > input,select,textarea {
-    border-radius: 5px;
-    border: 1px solid grey;
-    width: 100%;
-    text-align: center;
-    opacity: 0.8;  
-    padding-left: 5px;
-    resize: none;
-    
-}
+    .contato-form-right > input,select,textarea {
+        border-radius: 5px;
+        border: 1px solid grey;
+        width: 100%;
+        text-align: center;
+        opacity: 0.8;  
+        padding-left: 5px;
+        resize: none;
+        
+    }
 
-.contato-form-right > input,textarea {
-    text-align: left;
-}
+        .contato-form-right > input,textarea {
+            text-align: left;
+        }
 
-.contato-form-right > form > input,select,textarea {
-    font-family: var(--font-p);
-    font-weight: 600;
-}
+            .contato-form-right > form > input,select,textarea {
+                font-family: var(--font-p);
+                font-weight: 600;
+            }
 
 .button-form{
     grid-area: button;
     
 }
 
-.button-form button{
-    width: 95%;
-    height: 50px;
-    border-radius: 20px;
-    font-family: var(--font-p);
-    font-weight: 600;
-    background-color: white;
-    font-size: 1.5em;
-    opacity: 0.8;
-    cursor: pointer;
+    .button-form button{
+        width: 95%;
+        height: 50px;
+        border-radius: 20px;
+        font-family: var(--font-p);
+        font-weight: 600;
+        background-color: white;
+        font-size: 1.5em;
+        opacity: 0.8;
+        cursor: pointer;
 
-    
-}
+    }
 
 section > div > div > p > a:hover {
     color: var(--gold-color);
    
 }
 
-section {
-    height: 100vh; /* Cada seção ocupa a tela toda */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
+    section {
+        height: 100vh; /* Cada seção ocupa a tela toda */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
 
-section p {
-    font-family: var(--font-p);
-    padding: 0 300px 0 300px;
-    
-}
+        section p {
+            font-family: var(--font-p);
+            padding: 0 300px 0 300px;
+            
+        }
 
-section > div > p  {
-    font-family: var(--font-p);
-    
-}
+            section > div > p  {
+                font-family: var(--font-p);
+                
+            }
 
-section h1{
-    font-family: var(--font-serif);
-    font-weight: 700;
-    font-size: 1.9em;
-    font-style: normal;
-}
+                section h1{
+                    font-family: var(--font-serif);
+                    font-weight: 700;
+                    font-size: 1.9em;
+                    font-style: normal;
+                }
 
-section h2{
-    font-family: var(--font-serif);
-}
+                    section h2{
+                        font-family: var(--font-serif);
+                    }
 
-section h1,h2,p {
-    padding: 0 0 30px 0;
-        
-}
+                        section h1,h2,p {
+                            padding: 0 0 30px 0;
+                                
+                        }
 
 footer {
     display: grid;
@@ -450,7 +488,7 @@ footer {
 /* Cores Alternadas para seções */
 #home { background-color: var(--section-gray3); color: var(--font-white); }
 #carousel { background-color: var(--section-white);}
-#portfolio { background-color: var(--section-gray1) ; }
+#portfolio { background: radial-gradient(circle, #636363 40%, #333333 100%); }
 #services { background-color: var(--section-gray2); }
 #contact { background-color: var(--section-gray3); color: var(--font-white); }
 
